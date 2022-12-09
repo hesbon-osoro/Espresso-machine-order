@@ -1,0 +1,397 @@
+@charset "utf-8";
+/*
+   New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
+   Tutorial 13
+   Review Assignment
+   
+   Coctura Layout Style Sheet 4
+
+   Filename: co_layout4.css
+
+*/
+
+/* HTML and Body Styles */
+
+html {
+  background: rgb(191, 191, 191);
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  color: rgb(101, 101, 101);
+}
+
+body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  background: white;
+  max-width: 1020px;
+  min-width: 420px;
+  margin: 0px auto;
+  box-shadow: rgb(51, 51, 51) 10px 10px 25px, rgb(51, 51, 51) -10px 10px 25px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  margin: 15px;
+}
+
+/* Header Styles */
+
+body > header {
+  width: 100%;
+}
+
+body > header > section {
+  height: 40px;
+  text-align: right;
+  padding-top: 10px;
+}
+body > header > section label {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+body > header > img {
+  display: block;
+  width: 100%;
+}
+
+/* User Form Styles */
+
+input#username {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+input#password {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* Top Navigation Styles */
+
+nav#toptop ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 40px;
+  border-top: 4px double rgb(211, 211, 211);
+  border-bottom: 4px double rgb(211, 211, 211);
+  background-color: rgb(122, 90, 53);
+}
+
+nav#toptop ul li {
+  -webkit-flex: 0 1 100px;
+  flex: 0 1 100px;
+  margin: 10px;
+}
+
+nav#toptop ul li a {
+  color: rgb(211, 211, 211);
+  display: block;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 50% 0%;
+  font-variant: small-caps;
+}
+
+nav#toptop ul li a:hover,
+nav#toptop ul li a:active {
+  color: rgb(211, 211, 211);
+}
+
+nav#bottomtop ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 40px;
+  border-top: 4px double rgb(57, 44, 28);
+  border-bottom: 4px double rgb(57, 44, 28);
+}
+
+nav#bottomtop ul li {
+  -webkit-flex: 0 1 80px;
+  flex: 0 1 80px;
+  margin: 10px;
+}
+
+nav#bottomtop ul li a {
+  color: rgb(57, 44, 28);
+  display: block;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 50% 0%;
+  font-variant: small-caps;
+}
+
+/* Left Navigation Styles */
+
+nav#left {
+  -webkit-flex: 0 0 200px;
+  flex: 0 0 200px;
+}
+
+nav#left ul {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+nav#left ul li {
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+
+nav#left ul li.newgroup {
+  margin-top: 20px;
+}
+
+nav#left ul li a {
+  color: rgb(101, 101, 101);
+}
+
+/* Order Table Styles */
+
+table#orderTable {
+  margin: 30px 0px 0px 45px;
+  width: 65%;
+  border-collapse: collapse;
+  color: rgb(151, 151, 151);
+}
+
+form#order input {
+  background-color: transparent;
+  border: none;
+  color: rgb(151, 151, 151);
+}
+
+table#orderTable td {
+  height: 20px;
+  vertical-align: top;
+}
+
+form#order input#modelQty {
+  width: 3em;
+}
+
+form#order input#modelName,
+form#order input#shippingType {
+  width: 15em;
+}
+
+form#order input {
+  color: rgb(151, 151, 151);
+}
+
+table#orderTable tr td:last-of-type input {
+  text-align: right;
+  border: none;
+}
+
+table#orderTable tr:nth-of-type(2) {
+  border-bottom: 1px solid rgb(151, 151, 151);
+}
+
+table#orderTable tr:nth-of-type(2) td,
+table#orderTable tr:nth-of-type(4) td {
+  padding-top: 15px;
+}
+
+table#orderTable tr:nth-of-type(4) td {
+  border-bottom: 4px double rgb(151, 151, 151);
+}
+
+table#orderTable tr:last-of-type td {
+  padding-top: 15px;
+}
+
+table#orderTable td.rightA {
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* Credit Form Styles */
+
+section#paySection {
+  -webkit-flex: 1 1 400px;
+  flex: 1 1 400px;
+  border-left: 4px double rgb(101, 101, 101);
+  min-height: 300px;
+}
+
+section#paySection form#credit fieldset#cards {
+  display: block;
+  clear: left;
+}
+
+section#paySection p#footnote {
+  font-size: 1em;
+  text-align: left;
+  margin: 0px 10px 20px 140px;
+}
+
+section#paySection h1 {
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 0.15em;
+  margin: 20px 0px;
+  font-weight: normal;
+  color: rgb(57, 44, 28);
+}
+
+form#credit fieldset {
+  border: none;
+}
+
+form#credit fieldset#cards label:first-of-type {
+  text-align: right;
+  margin-left: 50px;
+}
+
+form#credit legend {
+  font-size: 1.3em;
+  padding: 8px;
+  width: 80%;
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  color: rgb(57, 44, 28);
+}
+
+/* Input and Label Styles */
+
+form#credit label {
+  display: block;
+  float: left;
+  clear: left;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  width: 180px;
+  text-align: right;
+  color: rgb(57, 44, 28);
+}
+
+form#credit input {
+  display: block;
+  float: left;
+  box-shadow: 0px 0px 15px white;
+}
+
+/* Radio Button Styles */
+
+form#credit label.cardLabel {
+  display: inline-block;
+  float: none;
+  width: auto;
+}
+
+form#credit fieldset#cards img {
+  display: inline-block;
+  margin-left: 5px;
+  box-shadow: 0px 0px 10px rgb(124, 92, 54);
+}
+
+form#credit input[type="radio"] {
+  display: inline-block;
+  width: auto;
+  float: none;
+  clear: none;
+}
+
+form#credit fieldset#cards {
+  text-align: left;
+  margin-left: 50px;
+}
+
+form#credit input#cvc {
+  width: 3em;
+}
+
+form#credit input#expDate {
+  width: 5em;
+}
+
+form#credit input#subButton {
+  display: block;
+  width: 180px;
+  height: 35px;
+  margin: 15px 0px 10px 200px;
+  background-color: rgba(232, 218, 201, 0.8);
+  font-size: 1.3em;
+  border-radius: 20px;
+  float: none;
+}
+
+/* Valid and Invalid Styles */
+
+input:invalid,
+input:focus:invalid {
+  outline: none;
+  background-color: rgba(221, 147, 148, 0.2);
+}
+
+input:valid,
+input:focus:valid {
+  outline: none;
+  background-color: none;
+}
+
+/* Footer Styles */
+
+footer {
+  width: 100%;
+}
+
+footer p {
+  color: rgb(211, 211, 211);
+  font-size: 0.9em;
+  text-align: center;
+  background-color: rgb(122, 90, 53);
+  margin: 0px;
+  padding: 10px 0px;
+}
+
+/* Bottom Navigation List Styles */
+
+nav#bottom {
+  background-color: rgb(238, 218, 201);
+  padding: 15px;
+}
+
+nav#bottom ul li {
+  font-size: 1em;
+  line-height: 1.8em;
+}
+
+nav#bottom ul a {
+  color: rgb(101, 101, 101);
+}
+
+/* Bottom Navigation Styles */
+
+nav#bottom {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+nav#bottom ul {
+  flex: 0 1 150px;
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+    New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
+    Tutorial 13
+    Review Assignment
+    
+    Coctura Cart Page
+    Author: Hesbon Osoro
+    Date: 12/10/22   
+
+    Filename: co_cart.html
+   -->
+
+    <title>Coctura Shopping Chart</title>
+    <meta charset="utf-8" />
+    <link href="co_base.css" rel="stylesheet" />
+    <link href="co_layout3.css" rel="stylesheet" />
+    <script src="co_cart.js" async></script>
+  </head>
+
+  <body>
+    <header>
+      <section>
+        <form id="memberForm">
+          <label for="username">Member Name</label>
+          <input id="username" name="user" type="text" />
+          <label for="password">Password</label>
+          <input type="password" id="password" name="pwd" />
+        </form>
+      </section>
+      <nav id="toptop">
+        <ul>
+          <li><a href="#">registry</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">stores</a></li>
+          <li><a href="#">recipes</a></li>
+          <li><a href="#">contact us</a></li>
+        </ul>
+      </nav>
+      <img src="co_logo.png" alt="Coctura" />
+      <nav id="bottomtop">
+        <ul>
+          <li><a href="#">cookware</a></li>
+          <li><a href="#">cutlery</a></li>
+          <li><a href="#">electrics</a></li>
+          <li><a href="#">bakeware</a></li>
+          <li><a href="#">food</a></li>
+          <li><a href="#">bar</a></li>
+          <li><a href="#">homekeeping</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="summary">
+      <h1>EC115 Pump Espresso Machine</h1>
+      <h2>by <a href="#">Baxter Coffee</a></h2>
+      <h3>
+        Customer Rating (903 votes): <img src="co_stars4.png" alt="4 stars" />
+      </h3>
+      <img src="co_espresso.png" alt="" />
+      <p>
+        Prepare espresso drinks at home with EC115 Pump Espresso Machine by
+        Baxter Coffee. The EC115 creates delicious cappuccinos with rich foam
+        using our patented nozzle system. You can enjoy your espresso almost
+        immmediately thanks to the thermolink<sup>&reg;</sup> technology. With
+        self-priming, the EC115 is always ready to go. The EC115 is easily
+        customizable with filters that support single and double shots.
+      </p>
+    </section>
+
+    <section id="orderSection">
+      <form id="cart" name="cart" action="co_credit.html" method="get">
+        <table id="cartTable">
+          <caption>
+            Shopping Cart
+          </caption>
+          <tr>
+            <td>
+              <label>EC115 Pump Espresso Machine ($249.95)</label>
+              <input
+                type="hidden"
+                name="modelCost"
+                id="modelCost"
+                value="249.95"
+              />
+              <input
+                type="hidden"
+                id="modelName"
+                name="modelName"
+                value="ECC115 Pump Espresso Machine ($249.95)"
+              />
+            </td>
+            <td class="rightA">
+              <label for="modelQty">Qty</label>
+              <select name="modelQty" id="modelQty">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="orderCost"
+                id="orderCost"
+                size="10"
+                readonly
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="hidden" id="shippingType" name="shippingType" />
+              <fieldset>
+                <legend>Shipping</legend>
+                <label
+                  ><input
+                    type="radio"
+                    id="overnight"
+                    name="shipping"
+                    value="28.50"
+                    checked
+                  />
+                  Overnight Shipping ($28.50 per)</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    id="day_2"
+                    name="shipping"
+                    value="19.95"
+                  />
+                  2-Day Shipping ($19.95 per)</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    id="ground"
+                    name="shipping"
+                    value="12.95"
+                  />
+                  Ground Shipping ($12.95 per)</label
+                >
+              </fieldset>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="shippingCost"
+                id="shippingCost"
+                size="10"
+                readonly
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="rightA">Subtotal</td>
+            <td class="outcell">
+              <input
+                type="text"
+                name="subTotal"
+                id="subTotal"
+                size="10"
+                readonly
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="rightA">Tax (5%)</td>
+            <td>
+              <input
+                type="text"
+                name="salesTax"
+                id="salesTax"
+                size="10"
+                readonly
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="rightA">TOTAL</td>
+            <td>
+              <input
+                type="text"
+                name="cartTotal"
+                id="cartTotal"
+                size="10"
+                readonly
+              />
+            </td>
+          </tr>
+        </table>
+        <input type="submit" id="buttonAdd" value="Checkout" />
+      </form>
+    </section>
+    <footer>
+      <nav id="bottom">
+        <ul>
+          <li>
+            <a href="#"
+              ><img id="fbicon" src="co_fbicon.png" alt="" />facebook</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                id="twittericon"
+                src="co_twittericon.png"
+                alt=""
+              />twitter</a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li><a href="#">help &amp; info</a></li>
+          <li><a href="#">track your order</a></li>
+          <li><a href="#">shipping info</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">gift cards</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">find a store</a></li>
+          <li><a href="#">request a catalog</a></li>
+          <li><a href="#">top picks</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">manage your account</a></li>
+          <li><a href="#">order history</a></li>
+          <li><a href="#">contact us</a></li>
+        </ul>
+      </nav>
+      <p>Coctura Home Kitchen &copy; 2018 All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
